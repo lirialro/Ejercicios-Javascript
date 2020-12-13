@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 3
+        </title>
+    </head>
+    <body>
+
+        <script>
+
+        document.write("-Factorial del número 10 con el bucle for:" + "<br>");
+
+        resultado1=1
+        for (var i=2; i<=10; i++) {
+        resultado1 *= i;
+         }
+    
+        document.write(resultado1+"<br><br>");
+
+        document.write("-Factorial del número 10 con el bucle while:" + "<br>");
+
+        i = 2;
+        resultado2 = 1;
+        while (i <= 10) {
+        resultado2 *= i;
+        i++;
+        }
+        document.write(resultado2+"<br><br>")
+
+        
+
+        document.write("-Múltiplos de 2 en Array de números con el bucle while:" + "<br>");
+        
+
+        var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        var z = 0
+        
+        var multiplos = []
+        
+        while (z<10) {
+
+            var modulo = numeros[z]%2
+            if (modulo == 0) {
+
+                multiplos.push(numeros[z]);
+            
+                }
+                z++;
+            }
+            document.write("Los multiplos de 2 son: "+ multiplos + "<br><br>");
+            
+        
+       
+
+
+        document.write("-Suma de los 100 primeros números:" + "<br>");
+
+
+        var sumadecien = 0
+        var j = 0
+        while (j<101) {
+        
+            
+        sumadecien +=j 
+        j++
+        }
+         
+    
+        document.write(sumadecien+"<br><br>");
+
+
+
+        
+        document.write("-Índice de la primera ocurrencia del nombre Pepe:" + "<br>");
+
+
+        var nombres = ["Juana", "Carlos", "Pepe", "María", "Laura", "José", "Valeria", "Eduardo", "Paula", "Martina"];
+        
+        for (var i=0; i<10; i++)
+         {
+            if(nombres[i] == "Pepe")
+            {
+                document.write(nombres[i]+" ["+i+"]"+"<br><br>");
+                break;
+            }
+        }
+    
+        
+
+            
+        document.write("-Suma de dos vectores de 100 números aleatorios entre 0 y 20:" + "<br>");
+
+        var aleatoriosA = []
+        document.write ("Vector A: "+"<br>")
+        for (var i=0; i<100; i++)
+        {
+           var aleatorio = Math.round(Math.random() *20);
+           
+           aleatoriosA.push(aleatorio);   
+
+            document.write (aleatorio +"   ")
+           
+        }
+
+        document.write ("<br>")
+
+        aleatoriosB = []
+        document.write ("Vector B: "+"<br>");
+        for (var i=0; i<100; i++)
+        {
+           var aleatorio = Math.round(Math.random() *20);  
+
+              aleatoriosB.push(aleatorio);
+
+              document.write (aleatorio +"   ")
+
+        }
+
+        document.write ("<br>")
+
+        document.write ("Vector A + Vector B = "+"<br>");
+
+        sumafinal = []
+        for (var i=0; i<100; i++)
+        {
+           var suma = aleatoriosA[i] + aleatoriosB[i];
+
+           sumafinal.push(suma);
+
+           document.write (suma +"   ")
+        }
+
+
+           
+
+
+   
+        </script>
+
+    </body>
+</html>

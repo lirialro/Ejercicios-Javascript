@@ -1,0 +1,17 @@
+<html>
+    <head lang="es-ES">
+        <meta charset= "UTF-8">
+        <title>Genera número</title>
+    </head>
+    <body>
+        <div>
+            <button onclick="generar()" style="margin-left:auto; margin-right: auto; margin-top:5%; display:block">Generar número</button>
+        </div>
+        <script>
+            function generar() {
+            var aleatorio = Math.round(Math.random()*10);
+            alert("Número aleatorio entre 0 y 10: "+aleatorio);
+            }  
+        </script>
+    </body>
+</html>

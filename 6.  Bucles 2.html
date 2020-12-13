@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 2
+        </title>
+    </head>
+    <body>
+
+        <script>
+            var persona1 = {
+                "nombre": "Javier",
+                "apellido": "Núñez",
+                "anyoNacimiento": 2005,
+                "aficiones": ["leer", "atletismo", "bucear", "cocinar"],
+                "dni":{"anyoExpedicion": 2016, "lugarNacimiento": "Alicante"},
+                "colorPelo": "castaño"
+            }
+            var persona2 = {
+                "nombre": "Laura",
+                "apellido": "Hernández",
+                "anyoNacimiento": 1976,
+                "aficiones": ["pintar", "escuchar música", "esquiar", "leer"],
+                "dni":{"anyoExpedicion": 2018, "lugarNacimiento": "Valencia"},
+                "colorPelo": "negro"
+            }
+            var persona3 = {
+                "nombre": "Rafael",
+                "apellido": "Fernández",
+                "anyoNacimiento": 1986,
+                "aficiones": ["surfear", "viajar", "ver películas", "aprender idiomas"],
+                "dni":{"anyoExpedicion": 2020, "lugarNacimiento": "Málaga"},
+                "colorPelo": "pelirojo"
+            }
+            var persona4 = {
+                "nombre": "Helena",
+                "apellido": "Coronado",
+                "anyoNacimiento": 1992,
+                "aficiones": ["ballet", "piano", "nadar", "yoga"],
+                "dni":{"anyoExpedicion": 2013, "lugarNacimiento": "Toledo"},
+                "colorPelo": "rubio"
+            }
+
+            
+            var personas = [persona1, persona2, persona3, persona4];
+
+            document.write("-Todos los elementos del Array personas con el bucle for:" + "<br>");
+
+            text1 = "";
+            for (var i = 0; i < 4; i++) {
+                text1 += JSON.stringify(personas[i]) + "<br>";
+            }
+                       
+            document.write(text1+"<br>");
+
+            document.write("-Todos los elementos del Array personas con el bucle while:" + "<br>");
+           
+            text2 = "";
+            var z = 0
+            while (z < 4) {
+                text2 += JSON.stringify(personas[z]) + "<br>";
+                z++;
+            }
+            document.write(text2+"<br>")
+ 
+
+            document.write("-Personas cuyo año de nacimiento está entre 1978 y 2000 con el bucle for:" + "<br>");
+       
+            text3 = "";
+            for (var i = 0; i < 4; i++) {
+                if(personas[i].anyoNacimiento >= 1978 && personas[i].anyoNacimiento <= 2000)
+                {
+                    text3 += ("El año de nacimiento de " + personas[i].nombre + " es: " + personas[i].anyoNacimiento + "." +"<br>");
+                }        
+            }
+            document.write(text3+"<br>")
+
+            
+            document.write("-Mensaje sobre el rango de edad con el bucle for:" + "<br>");
+
+
+            text4 = "";
+            for (var i = 0; i < 4; i++) {
+                if(personas[i].anyoNacimiento >= 1980 && personas[i].anyoNacimiento <= 2000)
+
+                {
+                    text4 += (personas[i].nombre + ", tu edad está entre 40 y 20 años."+"<br>");
+                }
+                else if (personas[i].anyoNacimiento > 2000)  
+                {
+                    text4 += (personas[i].nombre + ", tu edad es menor de 20."+"<br>");
+                } 
+                else 
+                {
+                    text4 += (personas[i].nombre + ", tu edad es mayor de 40."+"<br>");
+                }
+
+            }
+            document.write(text4+"<br>")
+            
+
+            document.write("-Personas cuyo año de nacimiento está entre 1978 y 2000 con el bucle while:" + "<br>");
+
+
+            text5 = "";
+            j = 0
+            while (j < 4) {
+                if (personas[j].anyoNacimiento >= 1978 && personas[j].anyoNacimiento <= 2000)
+                {
+                    text5 += ("El año de nacimiento de " + personas[j].nombre + " es: " + personas[j].anyoNacimiento + "." +"<br>");
+                }
+                j++;
+            }
+                document.write(text5+"<br>")
+                
+                document.write("-Mensaje sobre el rango de edad con el bucle while:" + "<br>");
+
+            
+                text6 = "";
+            x = 0
+            while (x < 4) {
+                if (personas[x].anyoNacimiento >= 1980 && personas[x].anyoNacimiento <= 2000)     
+                {
+                     text6 += (personas[x].nombre + ", tu edad está entre 40 y 20 años."+"<br>");
+                     x++;
+                }
+                else if (personas[x].anyoNacimiento >= 2001)
+                {
+                    text6 += (personas[x].nombre + ", tu edad es menor de 20."+"<br>");
+                    x++;
+                } 
+                else if (personas[x].anyoNacimiento <= 1979)
+                {
+                    text6 += (personas[x].nombre + ", tu edad es mayor de 40."+"<br>");
+                    x++;
+                }
+            } 
+
+             document.write(text6+"<br>")
+                
+               
+             document.write("-Se agrega afición jugar a la play:" + "<br>");
+            
+                
+            for (var i = 0; i < 4; i++) {
+
+                
+                personas[i].aficiones.push ("jugar a la play");
+                       
+            
+                document.write(JSON.stringify(personas[i]));
+            }
+            
+
+            
+
+
+
+        </script>
+
+
+    </body>
+
+</html>

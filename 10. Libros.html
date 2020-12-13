@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 4
+        </title>
+    </head>
+    <body>
+
+        <script>
+
+        
+
+            var libros =  ["Ready player one", "El nombre del viento", "El temor de un hombre sabio", "Cien años de soledad", "Origen"]; 
+
+            var librosycifras = []
+            
+            var longitud = 0
+            var maslargo = 0           
+
+            for (var i = 0; i < libros.length; i++) 
+            {                           
+                var letras = 0
+
+                for (var j = 0; j < libros[i].length; j++) {                
+
+                    if (libros[i][j] != " "){ 
+                        letras++
+                    }
+                }
+                if(letras > longitud){
+                    longitud = letras
+                    maslargo = i
+                }
+                librosycifras.push(libros[i] + " [" + letras +"] <br>") 
+            }
+
+            librosycifras[maslargo] = "<strong>" + librosycifras[maslargo] + "</strong>"
+
+            for (var i = 0; i < librosycifras.length; i++) 
+            {  
+                document.write(librosycifras[i])
+            }  
+
+
+            
+     
+
+
+
+           document.write (libro1a)
+
+        
+        
+        
+        
+        </script>
+
+    </body>
+</html>

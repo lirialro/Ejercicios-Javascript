@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 1-6
+        </title>
+    </head>
+    <body>
+
+        <script>
+
+            class Persona {
+                constructor (nombre, pesokg, tallacm, genero, anyoNacimiento, aficiones) {
+                    this.nombre = nombre
+                    this.pesokg = pesokg
+                    this.tallacm = tallacm
+                    this.genero = genero
+                    this.anyoNacimiento = anyoNacimiento
+                    this.aficiones = aficiones
+                }
+                
+                get Nombre()
+                {
+                    return this.nombre
+                }
+                get Peso()
+                {
+                    return this.pesokg
+                }
+                get Talla()
+                {
+                    return this.tallacm
+                }
+                get Genero()
+                {
+                    return this.genero
+                }
+                get Anyo()
+                {
+                    return this.anyoNacimiento
+                }
+                get Aficiones()
+                {
+                    return this.aficiones
+                }
+                set Nombre(nuevoNombre)
+                {
+                    this.nombre = nuevoNombre
+                }
+                set Peso(nuevoPeso)
+                {
+                    this.pesokg = nuevoPeso
+                }
+                set Talla(nuevaTalla)
+                {
+                    this.tallacm = nuevaTalla
+                }
+                set Genero(nuevoGenero)
+                {
+                    this.genero = nuevoGenero
+                }
+                set Anyo(nuevoAnyo)
+                {
+                    this.anyoNacimiento = nuevoAnyo
+                }
+                set Aficiones(nuevasAficiones)
+                {
+                    this.aficiones = nuevasAficiones;
+                }
+
+            
+
+                imc () {
+            
+                    var resultado=(this.pesokg/(this.tallacm*this.tallacm)*10000).toFixed(1);
+            
+                    return resultado;
+                }
+
+                edad (anyoactual) {
+
+                    var anyoactual = 2020
+                    var resultado = anyoactual-this.anyoNacimiento;
+        
+                    return resultado;
+                }
+
+
+                mostrarTodos () {
+
+            
+                    var todos = "-Nombre: " + this.nombre + "\n" +"Peso: " + this.pesokg + "\n" + "Talla: " + this.tallacm + "\n" + "Género: " + this.genero + "\n" + "Año de nacimiento: " + this.anyoNacimiento + "\nl" + "Aficiones: ";
+
+                    for (var i=0; i<this.aficiones.length; i++)
+
+                    {
+                        todos += this.aficiones[i] + " ";
+                    }
+
+
+                    console.log (todos);
+                }
+
+                mostrarAficiones () {
+
+                    var aficionestodas = "";
+
+                    for (var i=0; i<this.aficiones.length; i++)
+                    {
+                        aficionestodas += this.aficiones[i] + " ";
+                    }
+                    console.log ("Aficiones: " + aficionestodas);
+                }
+
+            }
+
+
+
+           
+
+
+   
+        </script>
+
+    </body>
+</html>

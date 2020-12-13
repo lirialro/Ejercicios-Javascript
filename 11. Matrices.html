@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 5
+        </title>
+    </head>
+    <body>
+
+        <script>
+
+    var aleatoriosA = []
+        document.write ("-Matriz A: " + "<br>")
+        for (var i=0; i<10; i++)
+        {
+           var dentroaleatorio = [] 
+
+            for (var j=0; j<10; j++)
+            {
+                var aleatorio = Math.round(Math.random() *50);
+           
+                dentroaleatorio.push(aleatorio);   
+            }
+
+            aleatoriosA.push(dentroaleatorio);
+        }
+
+        for (var i=0; i<10; i++)
+        {
+           
+
+            for (var j=0; j<10; j++)
+            {
+                document.write (aleatoriosA[i][j] + "   ")
+        
+            }
+
+            document.write ("<br>")
+
+        }
+
+        document.write ("<br>")
+        
+        var aleatoriosB = []
+        document.write ("-Matriz B: " + "<br>")
+        for (var i=0; i<10; i++)
+        {
+           var dentroaleatorio = [] 
+
+            for (var j=0; j<10; j++)
+            {
+                var aleatorio = Math.round(Math.random() *50);
+           
+                dentroaleatorio.push(aleatorio);   
+            }
+
+            aleatoriosB.push(dentroaleatorio);
+        }
+
+        for (var i=0; i<10; i++)
+        {
+           
+
+            for (var j=0; j<10; j++)
+            {
+                document.write (aleatoriosB[i][j] + "   ")
+        
+            }
+
+            document.write ("<br>")
+
+        }
+
+        document.write ("<br>")
+
+        document.write ("Matriz A + Matriz B = " + "<br>");
+
+        for (var i=0; i<10; i++)
+        {
+           
+
+            for (var j=0; j<10; j++)
+            {   
+                
+                document.write (aleatoriosA[i][j] + aleatoriosB[i][j] + "   ")
+        
+            }
+
+            document.write ("<br>")
+
+        }
+
+        document.write ("<br>")
+
+        document.write ("(Matriz A + Matriz B) x número aleatorio= " + "<br>");
+
+        var num_aleatorio = Math.round(Math.random()*10);
+        for (var i=0; i<10; i++)
+        {
+           
+
+            for (var j=0; j<10; j++)
+            {   
+                
+                document.write (((aleatoriosA[i][j] + aleatoriosB[i][j]) * num_aleatorio) + "   ")
+        
+            }
+
+            document.write ("<br>")
+
+        }
+
+
+
+        
+        </script>
+
+    </body>
+</html>

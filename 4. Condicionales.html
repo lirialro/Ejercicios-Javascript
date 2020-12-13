@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 4
+        </title>
+    </head>
+    <body>
+
+        <script>
+            var persona1 = {
+                "nombre": "José",
+                "apellido": "Romero",
+                "anyoNacimiento": 1990,
+                "aficiones": ["leer", "atletismo", "bucear", "cocinar"],
+                "dni":{"anyoExpedicion": 2017, "lugarNacimiento": "Madrid"},
+                "colorPelo": "negro"
+            }
+            var persona2 = {
+                "nombre": "Isabel",
+                "apellido": "Torres",
+                "anyoNacimiento": 1989,
+                "aficiones": ["pintar", "escuchar música", "esquiar", "leer"],
+                "dni":{"anyoExpedicion": 2019, "lugarNacimiento": "Barcelona"},
+                "colorPelo": "castaño"
+            }
+            var persona3 = {
+                "nombre": "Miguel",
+                "apellido": "Ramírez",
+                "anyoNacimiento": 1988,
+                "aficiones": ["surfear", "viajar", "ver películas", "aprender idiomas"],
+                "dni":{"anyoExpedicion": 2020, "lugarNacimiento": "Valencia"},
+                "colorPelo": "rubio"
+            }
+            var persona4 = {
+                "nombre": "Ana",
+                "apellido": "Pérez",
+                "anyoNacimiento": 1985,
+                "aficiones": ["ballet", "piano", "nadar", "yoga"],
+                "dni":{"anyoExpedicion": 2017, "lugarNacimiento": "Sevilla"},
+                "colorPelo": "castaño"
+            }
+
+            
+            var matrizpersonas = [persona1, persona2, persona3, persona4];
+
+            document.write ("-Las personas con el pelo castaño son: "+"<br>");
+            
+        if (matrizpersonas[0].colorPelo == "castaño"){
+            document.write (matrizpersonas[0].nombre+"<br>");
+        } 
+        if (matrizpersonas[1].colorPelo == "castaño"){
+            document.write (matrizpersonas[1].nombre+"<br>");
+        } 
+        if (matrizpersonas[2].colorPelo == "castaño"){
+            document.write (matrizpersonas[2].nombre+"<br>");
+        } 
+        if (matrizpersonas[3].colorPelo == "castaño"){
+            document.write (matrizpersonas[3].nombre+"<br>");
+        } 
+
+        document.write ("-La edades de las personas mayores de 30 son: "+"<br>");
+
+        if (2020-matrizpersonas[0].anyoNacimiento >30){
+            document.write (2020-matrizpersonas[0].anyoNacimiento +"<br>");
+        } 
+        if (2020-matrizpersonas[1].anyoNacimiento >30){
+            document.write (2020-matrizpersonas[1].anyoNacimiento +"<br>");
+        } 
+        if (2020-matrizpersonas[2].anyoNacimiento >30){
+            document.write (2020-matrizpersonas[2].anyoNacimiento +"<br>");
+        } 
+        if (2020-matrizpersonas[3].anyoNacimiento >30){
+            document.write (2020-matrizpersonas[3].anyoNacimiento +"<br>");
+        } 
+
+        document.write ("-Lugar de nacimiento de personas con el pelo negro y el dni caducado o de menores de edad cuya afición es comer o dormir: "+"<br>");
+
+        if ((matrizpersonas[0].colorPelo == "negro" && matrizpersonas[0].dni.anyoExpedicion < 2010) || (matrizpersonas[0].anyoNacimiento < 2002 && ((matrizpersonas[0].aficiones[0]== "comer" || matrizpersonas[0].aficiones[0]=="dormir") || (matrizpersonas[0].aficiones[1]== "comer" || matrizpersonas[0].aficiones[1]=="dormir") || (matrizpersonas[0].aficiones[2]== "comer" || matrizpersonas[0].aficiones[2]=="dormir") || (matrizpersonas[0].aficiones[3]== "comer" || matrizpersonas[0].aficiones[3]=="dormir")))) {
+            document.write (matrizpersonas[0].dni.lugarNacimiento+"<br>");
+        } else {
+            document.write (matrizpersonas[0].nombre + " no cumple con los requisitos para mostrar su lugar de nacimiento"+"<br>");
+        }
+        if ((matrizpersonas[1].colorPelo == "negro" && matrizpersonas[1].dni.anyoExpedicion < 2010) || (matrizpersonas[1].anyoNacimiento < 2002 && ((matrizpersonas[1].aficiones[0]== "comer" || matrizpersonas[1].aficiones[0]=="dormir") || (matrizpersonas[1].aficiones[1]== "comer" || matrizpersonas[1].aficiones[1]=="dormir") || (matrizpersonas[1].aficiones[2]== "comer" || matrizpersonas[1].aficiones[2]=="dormir") || (matrizpersonas[1].aficiones[3]== "comer" || matrizpersonas[1].aficiones[3]=="dormir")))) {
+            document.write (matrizpersonas[1].dni.lugarNacimiento+"<br>");
+        } else {
+            document.write (matrizpersonas[1].nombre + " no cumple con los requisitos para mostrar su lugar de nacimiento"+"<br>");
+        }
+        if ((matrizpersonas[2].colorPelo == "negro" && matrizpersonas[2].dni.anyoExpedicion < 2010) || (matrizpersonas[2].anyoNacimiento < 2002 && ((matrizpersonas[2].aficiones[0]== "comer" || matrizpersonas[2].aficiones[0]=="dormir") || (matrizpersonas[2].aficiones[1]== "comer" || matrizpersonas[2].aficiones[1]=="dormir") || (matrizpersonas[2].aficiones[2]== "comer" || matrizpersonas[2].aficiones[2]=="dormir") || (matrizpersonas[2].aficiones[3]== "comer" || matrizpersonas[2].aficiones[3]=="dormir")))) {
+            document.write (matrizpersonas[2].dni.lugarNacimiento+"<br>");
+        } else {
+            document.write (matrizpersonas[2].nombre + " no cumple con los requisitos para mostrar su lugar de nacimiento"+"<br>");
+        }
+        if ((matrizpersonas[3].colorPelo == "negro" && matrizpersonas[3].dni.anyoExpedicion < 2010) || (matrizpersonas[3].anyoNacimiento < 2002 && ((matrizpersonas[3].aficiones[0]== "comer" || matrizpersonas[3].aficiones[0]=="dormir") || (matrizpersonas[3].aficiones[1]== "comer" || matrizpersonas[3].aficiones[1]=="dormir") || (matrizpersonas[3].aficiones[2]== "comer" || matrizpersonas[3].aficiones[2]=="dormir") || (matrizpersonas[3].aficiones[3]== "comer" || matrizpersonas[3].aficiones[3]=="dormir")))) {
+            document.write (matrizpersonas[3].dni.lugarNacimiento+"<br>");
+        } else {
+            document.write (matrizpersonas[3].nombre + " no cumple con los requisitos para mostrar su lugar de nacimiento"+"<br>");
+        }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+        Reto 4
+        </title>
+    </head>
+    <body>
+
+        <script>
+            var persona1 = {
+                "nombre": "José",
+                "apellido": "Romero",
+                "anyoNacimiento": 1990,
+                "aficiones": ["leer", "atletismo", "bucear", "cocinar"],
+                "dni":{"anyoExpedicion": 2017, "lugarNacimiento": "Madrid"},
+                "colorPelo": "negro"
+            }
+            var persona2 = {
+                "nombre": "Isabel",
+                "apellido": "Torres",
+                "anyoNacimiento": 1989,
+                "aficiones": ["pintar", "escuchar música", "esquiar", "leer"],
+                "dni":{"anyoExpedicion": 2019, "lugarNacimiento": "Barcelona"},
+                "colorPelo": "castaño"
+            }
+            var persona3 = {
+                "nombre": "Miguel",
+                "apellido": "Ramírez",
+                "anyoNacimiento": 1988,
+                "aficiones": ["surfear", "viajar", "ver películas", "aprender idiomas"],
+                "dni":{"anyoExpedicion": 2020, "lugarNacimiento": "Valencia"},
+                "colorPelo": "rubio"
+            }
+            var persona4 = {
+                "nombre": "Ana",
+                "apellido": "Pérez",
+                "anyoNacimiento": 1985,
+                "aficiones": ["ballet", "piano", "nadar", "yoga"],
+                "dni":{"anyoExpedicion": 2017, "lugarNacimiento": "Sevilla"},
+                "colorPelo": "castaño"
+            }
+
+            
+            var matrizpersonas = [persona1, persona2, persona3, persona4];
+
+            document.write ("-Las personas con el pelo castaño son: "+"<br>");
+        
+            
+            for (var i = 0; i < 4; i++) {
+                
+                if (matrizpersonas[i].colorPelo == "castaño")
+                
+                document.write (matrizpersonas[i].nombre +"<br>");
+            }
+            
+
+        document.write ("-La edades de las personas mayores de 30 son: "+"<br>");
+            
+            for (var i = 0; i < 4; i++) {
+                
+                if (matrizpersonas[i].anyoNacimiento <1990)
+            document.write (2020-matrizpersonas[i].anyoNacimiento +"<br>");
+            }
+            
+
+            document.write ("-Lugar de nacimiento de personas con el pelo negro y el dni caducado o de menores de edad cuya afición es comer o dormir: "+"<br>");
+
+            for (var i = 0; i < 4; i++) {
+                
+                if ((matrizpersonas[0].colorPelo == "negro" && matrizpersonas[i].dni.anyoExpedicion < 2010) || (matrizpersonas[i].anyoNacimiento < 2002 && ((matrizpersonas[i].aficiones[0]== "comer" || matrizpersonas[i].aficiones[0]=="dormir") || (matrizpersonas[i].aficiones[1]== "comer" || matrizpersonas[i].aficiones[1]=="dormir") || (matrizpersonas[i].aficiones[2]== "comer" || matrizpersonas[i].aficiones[2]=="dormir") || (matrizpersonas[i].aficiones[3]== "comer" || matrizpersonas[i].aficiones[3]=="dormir"))))
+                {
+                document.write (matrizpersonas[i].lugarNacimiento +"<br>");
+                } else {
+
+                document.write (matrizpersonas[i].nombre + " no cumple con los requisitos para mostrar su lugar de nacimiento" + "<br>");
+                }
+            }
+        
+
+
+        </script>
+
+    </body>
+</html>
